@@ -4,12 +4,14 @@ import Typewriter from "typewriter-effect";
 function Type() {
   return (
     <Typewriter
+      style={{ color: "red" }}
       options={{
         strings: [
-          "Software Developer",
+          "Full Stack Developer",
+          "Node.js Developer",
+          "React.js Developer",
+          "Java Developer",
           "Freelancer",
-          "MERN Stack Developer",
-          "Open Source Contributor",
         ],
         autoStart: true,
         loop: true,
