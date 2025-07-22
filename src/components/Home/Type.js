@@ -4,7 +4,6 @@ import Typewriter from "typewriter-effect";
 function Type() {
   return (
     <Typewriter
-      style={{ color: "red" }}
       options={{
         strings: [
           "Full Stack Developer",
