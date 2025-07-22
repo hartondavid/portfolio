@@ -10,7 +10,7 @@ html {
   --imp-text-color: #c92115;
 }
 
-.purple {
+.red {
   color: var(--imp-text-color) !important;
 }
 
@@ -393,13 +393,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  box-shadow: 0 0 15px #c92115;
 }
 
 .home-social-icons:hover {
-  color: #87209e;
-  box-shadow: 0 0 5px #87209e;
-  text-shadow: 0 0 2px #87209e;
+  color: #c92115;
+  box-shadow: 0 0 5px #c92115;
+  text-shadow: 0 0 2px #c92115;
 }
 
 .social-icons {
@@ -409,7 +409,7 @@ button:focus {
 }
 
 .icon-colour {
-  color: #700c86 !important;
+  color: #c92115 !important;
 }
 
 /* --------- */
@@ -536,14 +536,14 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #623686 !important;
-  border-color: #623686 !important;
+  background-color: #c92115 !important;
+  border-color: #c92115 !important;
 }
 
 .btn-primary:hover {
   color: #fff !important;
-  background-color: #6d20c5d7 !important;
-  border-color: #6d20c5d7 !important;
+  background-color: #a81c12 !important;
+  border-color: #a81c12 !important;
 }
 
 .btn:focus {
@@ -575,7 +575,7 @@ button:focus {
   margin: 15px !important;
   padding: 10px !important;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  border: 1.7px solid #eb4438 !important;
   vertical-align: middle !important;
   text-align: center !important;
   border-radius: 5px !important;
@@ -594,7 +594,7 @@ button:focus {
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
-  border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
+  border: 2.2px solid #eb4438 !important;
 }
 
 .tech-icon-images {
@@ -668,7 +668,7 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #8a49a8;
+  border-left: 2px solid #c92115;
   position: relative;
 }
 
@@ -705,7 +705,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #8a49a8;
+  border: 2px solid #c92115;
 }
 
 .like-item {
@@ -715,8 +715,8 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #934cce5e !important;
-  border-color: #934cce5e !important;
+  background-color: #c92115 important;
+  border-color: #c92115 !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -725,8 +725,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #a24dd386 !important;
-  border-color: #a24dd386 !important;
+  background-color: #c92115 !important;
+  border-color: #c92115 !important;
 }
 
 .animate-like {
