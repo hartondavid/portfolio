@@ -324,6 +324,15 @@ button:focus {
   padding-top: 9em !important;
 }
 
+.avatar-container {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.avatar-container:hover {
+  transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+}
+
 @media (max-width: 767px) {
   .myAvtar {
     padding-top: 2em !important;
