@@ -269,9 +269,7 @@ button:focus {
 .home-section {
   position: relative;
   z-index: -1;
-  background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
-  background-position: top center;
-  background-repeat: no-repeat;
+  background: linear-gradient(135deg, #1b1a2e 0%, #16213e 50%, #0f3460 100%);
   padding-bottom: 30px !important;
   padding-top: 30px !important;
 }
