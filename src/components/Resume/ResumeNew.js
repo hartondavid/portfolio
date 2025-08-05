@@ -47,6 +47,8 @@ function ResumeNew() {
     setPdfError(false);
   };
 
+  // eslint-disable-next-line no-unused-vars
+
   return (
     <div>
       <Container fluid className="resume-section">
