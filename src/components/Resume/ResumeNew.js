@@ -2,18 +2,26 @@ import React, { useState, useEffect } from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/David Harton.pdf";
+import pdf from "../../Assets/David Harton.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
+
+// Set PDF worker source for production
+pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 function ResumeNew() {
   const [width, setWidth] = useState(1200);
+  const [pdfError, setPdfError] = useState(false);
 
   useEffect(() => {
     setWidth(window.innerWidth);
   }, []);
+
+  const handlePdfError = () => {
+    console.error('PDF failed to load');
+    setPdfError(true);
+  };
 
   return (
     <div>
@@ -32,9 +40,19 @@ function ResumeNew() {
         </Row>
 
         <Row className="resume">
-          <Document file={pdf} className="d-flex justify-content-center">
-            <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-          </Document>
+          {pdfError ? (
+            <div className="d-flex justify-content-center">
+              <p style={{ color: 'red' }}>PDF preview not available. Please use the download button above.</p>
+            </div>
+          ) : (
+            <Document
+              file={pdf}
+              className="d-flex justify-content-center"
+              onLoadError={handlePdfError}
+            >
+              <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
+            </Document>
+          )}
         </Row>
 
         <Row style={{ justifyContent: "center", position: "relative" }}>
