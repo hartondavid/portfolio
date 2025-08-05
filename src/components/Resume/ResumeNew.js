@@ -1,104 +1,54 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/David Harton.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
-import { Document, Page, pdfjs } from "react-pdf";
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-
-// Set PDF worker source for production - try multiple fallbacks
-try {
-  pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
-} catch (error) {
-  console.warn('Failed to set PDF worker from unpkg, trying alternative...');
-  pdfjs.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
-}
 
 function ResumeNew() {
-  const [width, setWidth] = useState(1200);
-  const [pdfError, setPdfError] = useState(false);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    setWidth(window.innerWidth);
-
-    // Set a timeout to show error if PDF doesn't load within 10 seconds
-    const timeout = setTimeout(() => {
-      if (loading) {
-        console.warn('PDF loading timeout');
-        setPdfError(true);
-        setLoading(false);
-      }
-    }, 10000);
-
-    return () => clearTimeout(timeout);
-  }, [loading]);
-
-  const handlePdfError = () => {
-    console.error('PDF failed to load');
-    setPdfError(true);
-    setLoading(false);
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = pdf;
+    link.download = 'David Harton CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
-
-  const handlePdfSuccess = () => {
-    console.log('PDF loaded successfully');
-    setLoading(false);
-    setPdfError(false);
-  };
-
-  // eslint-disable-next-line no-unused-vars
 
   return (
     <div>
       <Container fluid className="resume-section">
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
-        </Row>
-
-        <Row className="resume">
-          {loading && !pdfError && (
-            <div className="d-flex justify-content-center">
-              <p>Loading PDF...</p>
-            </div>
-          )}
-
-          {pdfError ? (
-            <div className="d-flex justify-content-center">
-              <p style={{ color: 'red' }}>PDF preview not available. Please use the download button above.</p>
-            </div>
-          ) : (
-            <Document
-              file={pdf}
-              className="d-flex justify-content-center"
-              onLoadError={handlePdfError}
-              onLoadSuccess={handlePdfSuccess}
-              loading="Loading PDF..."
+        <Row className="resume" style={{ justifyContent: "center", padding: "50px 0" }}>
+          <div style={{
+            textAlign: 'center',
+            maxWidth: '600px',
+            padding: '40px',
+            border: '2px dashed #e6453a',
+            borderRadius: '10px',
+            backgroundColor: 'rgba(230, 69, 58, 0.1)'
+          }}>
+            <h3 style={{ color: '#e6453a', marginBottom: '20px' }}>
+              Download My Resume
+            </h3>
+            <p style={{ color: 'white', marginBottom: '30px' }}>
+              Click the button below to download my CV in PDF format
+            </p>
+            <Button
+              variant="primary"
+              onClick={handleDownload}
+              style={{
+                maxWidth: "250px",
+                backgroundColor: '#e6453a',
+                borderColor: '#e6453a',
+                fontSize: '18px',
+                padding: '12px 24px'
+              }}
             >
-              <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
-            </Document>
-          )}
-        </Row>
-
-        <Row style={{ justifyContent: "center", position: "relative" }}>
-          <Button
-            variant="primary"
-            href={pdf}
-            target="_blank"
-            style={{ maxWidth: "250px" }}
-          >
-            <AiOutlineDownload />
-            &nbsp;Download CV
-          </Button>
+              <AiOutlineDownload />
+              &nbsp;Download CV
+            </Button>
+          </div>
         </Row>
       </Container>
     </div>
