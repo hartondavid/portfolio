@@ -7,7 +7,7 @@ html {
       rgba(17, 16, 16, 0.678),
       rgba(12, 10, 22, 0.863));
 
-  --imp-text-color: #c92115;
+  --imp-text-color: #e6453a;
 }
 
 .red {
@@ -53,7 +53,7 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: #e6453a;
 }
 
 /* Handle */
@@ -93,7 +93,7 @@ button:focus {
 
 .navbar-toggler span {
   display: block !important;
-  background-color: #c92115 !important;
+  background-color: #e6453a !important;
   height: 4px !important;
   width: 27px !important;
   margin-top: 5px !important;
@@ -192,7 +192,7 @@ button:focus {
   height: 5px;
   width: 0;
   border-radius: 16px;
-  background: #c92115;
+  background: #e6453a;
   bottom: 1px;
   left: 0;
   z-index: -1;
@@ -296,13 +296,13 @@ button:focus {
 
 .Typewriter__wrapper {
   font-size: 2.2em !important;
-  color: #c92115 !important;
+  color: #e6453a !important;
   font-weight: 600 !important;
 }
 
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #c92115 !important;
+  color: #e6453a !important;
 }
 
 @media (max-width: 767px) {
@@ -392,7 +392,7 @@ button:focus {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background: #c92115;
+  background: #e6453a;
   transition: 0.5s;
   transform: scale(0.9);
   z-index: -1;
@@ -400,13 +400,13 @@ button:focus {
 
 .home-social-icons:hover::before {
   transform: scale(1.1);
-  box-shadow: 0 0 15px #c92115;
+  box-shadow: 0 0 15px #e6453a;
 }
 
 .home-social-icons:hover {
-  color: #c92115;
-  box-shadow: 0 0 5px #c92115;
-  text-shadow: 0 0 2px #c92115;
+  color: #e6453a;
+  box-shadow: 0 0 5px #e6453a;
+  text-shadow: 0 0 2px #e6453a;
 }
 
 .social-icons {
@@ -416,7 +416,7 @@ button:focus {
 }
 
 .icon-colour {
-  color: #c92115 !important;
+  color: #e6453a !important;
 }
 
 /* --------- */
@@ -484,10 +484,10 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  box-shadow: 0 4px 5px 3px #e6453a4a !important;
   color: white !important;
   background-color: transparent !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
@@ -495,7 +495,7 @@ button:focus {
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px #c9211586 !important;
+  box-shadow: 0 4px 4px 5px #e6453a !important;
 }
 
 .blog-card {
@@ -508,7 +508,7 @@ button:focus {
 
 .blog-card-view {
   background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px #c9211586 !important;
+  box-shadow: 0 3px 3px 2px #e6453a86 !important;
   color: white !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
@@ -526,12 +526,12 @@ button:focus {
 .blog-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px #c9211586 !important;
+  box-shadow: 0 3px 3px 5px #e6453a86 !important;
 }
 
 .card-img-top {
   padding: 20px !important;
-  opacity: 0.8 !important;
+  opacity: 1 !important;
   border-radius: 10px !important;
 }
 
@@ -543,8 +543,8 @@ button:focus {
 
 .btn-primary {
   color: #fff !important;
-  background-color: #c92115 !important;
-  border-color: #c92115 !important;
+  background-color: #e6453a !important;
+  border-color: #e6453a !important;
 }
 
 .btn-primary:hover {
@@ -675,7 +675,7 @@ button:focus {
 .resume .resume-item {
   padding: 0 0 10px 25px;
   margin-top: -2px;
-  border-left: 2px solid #c92115;
+  border-left: 2px solid #e6453a;
   position: relative;
 }
 
@@ -712,7 +712,7 @@ button:focus {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #c92115;
+  border: 2px solid #e6453a;
 }
 
 .like-item {
@@ -722,8 +722,8 @@ button:focus {
 }
 
 .like-btn {
-  background-color: #c92115 important;
-  border-color: #c92115 !important;
+  background-color: #e6453a important;
+  border-color: #e6453a !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -732,8 +732,8 @@ button:focus {
 
 .like-btn:hover {
   transform: translateY(-2px) !important;
-  background-color: #c92115 !important;
-  border-color: #c92115 !important;
+  background-color: #e6453a !important;
+  border-color: #e6453a !important;
 }
 
 .animate-like {

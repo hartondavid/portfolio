@@ -8,33 +8,40 @@ function AboutCard() {
       <Card.Body>
         <blockquote className="blockquote mb-0">
           <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="red">Soumyajit Behera </span>
-            from <span className="red"> Bhubaneswar, India.</span>
+            Hi Everyone, I am <span className="red" style={{ fontWeight: "bold" }}>David Harton </span>
+            from <span className="red" style={{ fontWeight: "bold" }}> Bucharest, Romania.</span>
             <br />
-            I am currently employed as a software developer at Juspay.
             <br />
-            I have completed Integrated MSc (IMSc) in Maths and Computing at BIT
-            Mesra.
+            The last job I had was as a software developer at <span className="red" style={{ fontWeight: "bold" }}>Magic Salon.</span>
+            <br />
+            <br />
+            I am currently searching for a job as a software developer.
+            <br />
+            <br />
+            I have completed a Bachelor's degree in Computer Science at <span className="red" style={{ fontWeight: "bold" }}>Bucharest University of Economic Studies.</span>
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
           </p>
           <ul>
             <li className="about-activity">
-              <ImPointRight /> Playing Games
+              <ImPointRight /> Running
             </li>
             <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
+              <ImPointRight /> Reading
             </li>
             <li className="about-activity">
               <ImPointRight /> Travelling
             </li>
+            <li className="about-activity">
+              <ImPointRight /> Cooking
+            </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
+          <p style={{ color: "#e6453a", fontWeight: "bold" }}>
+            "And we know that in all things God works for the good of those who love him, who have been called according to his purpose"{" "}
           </p>
-          <footer className="blockquote-footer">Soumyajit</footer>
+          <footer className="blockquote-footer" style={{ fontWeight: "bold" }}>Romans 8:28</footer>
         </blockquote>
       </Card.Body>
     </Card>
