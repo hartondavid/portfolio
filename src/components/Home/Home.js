@@ -4,6 +4,9 @@ import homeLogo from "../../Assets/home-main.png";
 import Particle from "../Particle";
 import Home2 from "./Home2";
 import Type from "./Type";
+import { AiOutlineDownload } from "react-icons/ai";
+import { Button } from "react-bootstrap";
+import pdf from "../../Assets/David Harton.pdf";
 
 function Home() {
   return (
@@ -28,9 +31,25 @@ function Home() {
               <div style={{ padding: 50, textAlign: "left" }}>
                 <Type />
               </div>
-
+              <Button
+                variant="primary"
+                href={pdf}
+                target="_blank"
+                style={{
+                  maxWidth: "250px",
+                  marginLeft: "50px",
+                  cursor: "pointer",
+                  position: "relative",
+                  zIndex: 10
+                }}
+              >
+                <AiOutlineDownload style={{ color: "black" }} />
+                <span style={{ color: "black" }}>&nbsp;Download CV</span>
+              </Button>
 
             </Col>
+
+
 
 
             <Col md={5} style={{ paddingBottom: 20 }}>

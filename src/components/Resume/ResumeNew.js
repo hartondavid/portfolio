@@ -26,8 +26,8 @@ function ResumeNew() {
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            <AiOutlineDownload style={{ color: "black" }} />
+            <span style={{ color: "black" }}>&nbsp;Download CV</span>
           </Button>
         </Row>
 
@@ -44,8 +44,8 @@ function ResumeNew() {
             target="_blank"
             style={{ maxWidth: "250px" }}
           >
-            <AiOutlineDownload />
-            &nbsp;Download CV
+            <AiOutlineDownload style={{ color: "black" }} />
+            <span style={{ color: "black" }}>&nbsp;Download CV</span>
           </Button>
         </Row>
       </Container>
