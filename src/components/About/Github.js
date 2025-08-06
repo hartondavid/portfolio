@@ -1,27 +1,21 @@
 import React, { useState, useEffect } from "react";
+import GitHubCalendar from "react-github-calendar";
 import { Row } from "react-bootstrap";
 
 function Github() {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
-  const [CalendarComponent, setCalendarComponent] = useState(null);
 
   useEffect(() => {
-    const loadComponent = async () => {
-      try {
-        // Try to import the component
-        const module = await import("react-github-calendar");
-        setCalendarComponent(() => module.default);
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error loading GitHub Calendar:", error);
+    // Set a timeout to handle loading and potential CORS issues
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      // If the calendar doesn't load after 8 seconds, show error
+      setTimeout(() => {
         setHasError(true);
-        setIsLoading(false);
-      }
-    };
+      }, 8000);
+    }, 3000);
 
-    // Add a small delay to ensure the component is ready
-    const timer = setTimeout(loadComponent, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -37,7 +31,7 @@ function Github() {
           color: "#f4cd0d",
           fontSize: "16px"
         }}>
-          <p>Unable to load GitHub contribution data.</p>
+          <p>Unable to load GitHub contribution data due to CORS restrictions.</p>
           <p>Check out my GitHub profile:
             <a
               href="https://github.com/hartondavid"
@@ -67,24 +61,22 @@ function Github() {
           Loading GitHub contributions...
         </div>
       )}
-      {CalendarComponent && !isLoading && (
-        <div>
-          <CalendarComponent
-            username="hartondavid"
-            blockSize={15}
-            blockMargin={5}
-            color="#f4cd0d"
-            fontSize={16}
-            theme={{
-              level0: '#ebedf0',
-              level1: '#9be9a8',
-              level2: '#40c463',
-              level3: '#30a14e',
-              level4: '#216e39',
-            }}
-          />
-        </div>
-      )}
+      <div style={{ opacity: isLoading ? 0.5 : 1 }}>
+        <GitHubCalendar
+          username="hartondavid"
+          blockSize={15}
+          blockMargin={5}
+          color="#f4cd0d"
+          fontSize={16}
+          theme={{
+            level0: '#ebedf0',
+            level1: '#9be9a8',
+            level2: '#40c463',
+            level3: '#30a14e',
+            level4: '#216e39',
+          }}
+        />
+      </div>
     </Row>
   );
 }
