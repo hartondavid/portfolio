@@ -38,7 +38,7 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "#e6453a", fontWeight: "bold" }}>
+          <p style={{ color: "#f4cd0d", fontWeight: "bold" }}>
             "And we know that in all things God works for the good of those who love him, who have been called according to his purpose"{" "}
           </p>
           <footer className="blockquote-footer" style={{ fontWeight: "bold" }}>Romans 8:28</footer>
